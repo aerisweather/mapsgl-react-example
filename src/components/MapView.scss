@@ -1,0 +1,51 @@
+.mapboxgl-canvas-container {
+    z-index: 5;
+}
+.mapboxgl-control-container {
+    z-index: 0;
+    opacity: 0.5;
+}
+.mapboxgl-ctrl-attrib {
+    background: transparent;
+    font-size: 11px;
+    a {
+        text-decoration: none;
+        &:after {
+            content: unset;
+        }
+    }
+}
+.mapview-globe {
+    .mapboxgl-ctrl-bottom-left {
+        bottom: 17%;
+    }
+    .mapboxgl-ctrl-bottom-right {
+        bottom: 17%;
+    }
+
+    &.mapview-globe-right {
+        .mapboxgl-ctrl-bottom-left {
+            left: unset;
+            right: 150px;
+            transform: translateX(100%);
+        }
+        .mapboxgl-ctrl-bottom-right {
+            left: unset;
+            right: 147px;
+            transform: translate(100%, 18px);
+        }
+    }
+
+    &.mapview-globe-left {
+        .mapboxgl-ctrl-bottom-left {
+            left: 0;
+            right: unset;
+            /* transform: translateX(0); */
+        }
+        .mapboxgl-ctrl-bottom-right {
+            left: 0;
+            right: unset;
+            transform: translateY(18px);
+        }
+    }
+}
